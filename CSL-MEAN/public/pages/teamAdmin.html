@@ -1,0 +1,40 @@
+<table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>        
+          <th>Win</th>
+          <th>Draw</th>
+          <th>Loss</th>
+          <th>GoalsFor</th>
+          <th>GoalsAgainst</th>
+          <th>Icon</th>
+          <th>Action</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input class="form-control" ng-model="team.name"></td>
+          <td><input class="form-control" ng-model="team.win"></td>
+          <td><input class="form-control" ng-model="team.draw"></td>
+          <td><input class="form-control" ng-model="team.loss"></td>
+          <td><input class="form-control" ng-model="team.goalsFor"></td>
+          <td><input class="form-control" ng-model="team.goalsAgainst"></td>
+          <td><input class="form-control-file" type = "file" file-model = "myFile"></td>
+          <td><button class="btn btn-primary" ng-click="addTeam()">Add Team</button></td>
+          <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+        </tr>
+        <tr ng-repeat="team in teamlist">
+          <td>{{team.name}}</td>
+          <td>{{team.win}}</td>
+          <td>{{team.draw}}</td>
+          <td>{{team.loss}}</td>
+          <td>{{team.goalsFor}}</td>
+          <td>{{team.goalsAgainst}}</td>
+          <td><img ng-src="{{team.path}}"></td>
+          <td><button class="btn btn-danger" ng-click="remove(team._id)">Remove</button></td>
+          <td><button class="btn btn-warning" ng-click="edit(team._id)">Edit</button></td>
+        </tr>
+      </tbody>
+      
+    </table>

@@ -1,0 +1,27 @@
+<table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>         
+          <th>Nationality</th>
+          <th>Number</th>
+          <th>Action</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input class="form-control" ng-model="player.name"></td>
+          <td><input class="form-control" ng-model="player.nationality"></td>
+          <td><input class="form-control" ng-model="player.number"></td>
+          <td><button class="btn btn-primary" ng-click="addPlayer()">Add Player</button></td>
+          <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+        </tr>
+        <tr ng-repeat="player in playerlist">
+          <td>{{player.name}}</td>
+          <td>{{player.nationality}}</td>
+          <td>{{player.number}}</td>
+          <td><button class="btn btn-danger" ng-click="remove(player._id)">Remove</button></td>
+          <td><button class="btn btn-warning" ng-click="edit(player._id)">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>

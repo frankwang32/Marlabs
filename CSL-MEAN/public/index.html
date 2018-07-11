@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+  <title>Chinese Super League</title>
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Chinese Super League</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li ><a href="/home">Home</a></li>
+          <li ><a href="/rank">Rank</a></li>
+          <li ><a href="/playerAdmin">Player Admin</a></li>
+          <li ><a href="/teamAdmin">Team Admin</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="col-sm-7"><h1>Chinese Super League</h1></div>
+    <div class="col-sm-5"><img src="/image/Chinese_Super_League_Logo.png" height="150" width="318"></div>
+    <div ng-view></div>
+   
+    <script src="javascripts/app.js"></script>
+    <script src="javascripts/rankCtrl.js"></script>
+    <script src="javascripts/playerAdminCtrl.js"></script>
+    <script src="javascripts/teamAdminCtrl.js"></script>
+    <script src="javascripts/fileModel.js"></script>
+    <script src="javascripts/multipartForm.js"></script>
+</body>
+</html>
